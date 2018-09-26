@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6EC3F99-9945-4083-911F-1C34D4218E15}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AfcCore</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;AFC_CORE_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\code\AfcCore\;$(SolutionDir)..\code\AfcCore\include\;$(SolutionDir)..\code\AfcCore\Crypto\;$(SolutionDir)..\code\public\;$(SolutionDir)..\code\AfcCore\SlDemo\;$(SolutionDir)..\..\linuxsystem_include\;$(SolutionDir)..\code\AfcCore\UnionPay\;$(SolutionDir)..\code\UtilProc\;$(SolutionDir)..\code\AfcCore\lib\;$(SolutionDir)..\code\AfcCore\fathead\;$(SolutionDir)..\code\xStorage\;$(SolutionDir)..\..\linuxsystem_include\arm-linux-gnueabi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;AFC_CORE_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\code\AfcCore\;$(SolutionDir)..\code\AfcCore\include\;$(SolutionDir)..\code\AfcCore\Crypto\;$(SolutionDir)..\code\public\;$(SolutionDir)..\code\AfcCore\SlDemo\;$(SolutionDir)..\..\linuxsystem_include\;$(SolutionDir)..\code\AfcCore\UnionPay\;$(SolutionDir)..\code\UtilProc\;$(SolutionDir)..\code\AfcCore\lib\;$(SolutionDir)..\code\AfcCore\fathead\;$(SolutionDir)..\code\xStorage\;$(SolutionDir)..\..\linuxsystem_include\arm-linux-gnueabi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\AfcCore\citydifferent.h" />
+    <ClInclude Include="..\..\code\AfcCore\CPUCard.h" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\MD5.h" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\MYDES.h" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\RSA.h" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\RSALib.h" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\RSAREF.H" />
+    <ClInclude Include="..\..\code\AfcCore\Crypto\sha1.h" />
+    <ClInclude Include="..\..\code\AfcCore\DEF8583.h" />
+    <ClInclude Include="..\..\code\AfcCore\EC20Lx_HTTP.h" />
+    <ClInclude Include="..\..\code\AfcCore\EC20Lx_HTTPS.h" />
+    <ClInclude Include="..\..\code\AfcCore\Fatfiles.h" />
+    <ClInclude Include="..\..\code\AfcCore\GPRSdatatype.h" />
+    <ClInclude Include="..\..\code\AfcCore\GprsSocket.h" />
+    <ClInclude Include="..\..\code\AfcCore\gps.h" />
+    <ClInclude Include="..\..\code\AfcCore\GPS\gpsd.h" />
+    <ClInclude Include="..\..\code\AfcCore\ICCardLib.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\apparel.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\City-handan.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\CPUCARJTB.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\Debug_ .h" />
+    <ClInclude Include="..\..\code\AfcCore\include\debug_.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\ev.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\include.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\InitSystem.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\kfifo.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\libHandanCore.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyCommon.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\ltycommondatatype.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\ltycommonfunction.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyError.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyLog.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyMessage.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyTimer.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\LtyTypeDef.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\Main_City.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\SlzrError.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\SlzrTypeDef.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\STProLib.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\StructDef.h" />
+    <ClInclude Include="..\..\code\AfcCore\include\szct.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\GPIOCtrl.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\IcCardCtrlApi.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\LightBeep.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\PsamCard.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\Uart.h" />
+    <ClInclude Include="..\..\code\AfcCore\inputmisc\WatchDog.h" />
+    <ClInclude Include="..\..\code\AfcCore\libsm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\alisp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\asoundef.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\asoundlib.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\conf.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\control.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\control_external.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\error.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\global.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\hwdep.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\input.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\mixer.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\mixer_abst.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\output.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_external.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_extplug.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_ioplug.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_old.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_plugin.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\pcm_rate.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\rawmidi.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\seq.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\seqmid.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\seq_event.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\seq_midi_event.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\asoc.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\asound_fm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\emu10k1.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\hdsp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\hdspm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\sb16_csp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\sscape_ioctl.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\tlv.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\sound\type_compat.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\timer.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\topology.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\use-case.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\version.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\sys\asoundlib.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\alisp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\asoundef.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\asoundlib.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\conf.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\control.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\control_external.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\error.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\global.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\hwdep.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\input.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\mixer.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\mixer_abst.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\output.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_external.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_extplug.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_ioplug.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_old.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_plugin.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\pcm_rate.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\rawmidi.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\seq.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\seqmid.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\seq_event.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\seq_midi_event.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\asoc.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\asound_fm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\emu10k1.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\hdsp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\hdspm.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\sb16_csp.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\sscape_ioctl.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\tlv.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\sound\type_compat.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\timer.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\topology.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\use-case.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\alsa\version.h" />
+    <ClInclude Include="..\..\code\AfcCore\ltyp2\alsa\include\sys\asoundlib.h" />
+    <ClInclude Include="..\..\code\AfcCore\Other\LightBeep.h" />
+    <ClInclude Include="..\..\code\AfcCore\Other\LtyTimer.h" />
+    <ClInclude Include="..\..\code\AfcCore\Other\LtyTypeDef.h" />
+    <ClInclude Include="..\..\code\AfcCore\Other\Uart.h" />
+    <ClInclude Include="..\..\code\AfcCore\Other\WatchDog.h" />
+    <ClInclude Include="..\..\code\AfcCore\PSAMLib.h" />
+    <ClInclude Include="..\..\code\AfcCore\QRCodeMain.h" />
+    <ClInclude Include="..\..\code\AfcCore\QRScan.h" />
+    <ClInclude Include="..\..\code\AfcCore\RecordFile.h" />
+    <ClInclude Include="..\..\code\AfcCore\SL8583.h" />
+    <ClInclude Include="..\..\code\AfcCore\SlDemo\DemoMain.h" />
+    <ClInclude Include="..\..\code\AfcCore\SlDemo\GPRS.h" />
+    <ClInclude Include="..\..\code\AfcCore\SlDemo\LightColor.h" />
+    <ClInclude Include="..\..\code\AfcCore\SlDemo\ProcCharacter.h" />
+    <ClInclude Include="..\..\code\AfcCore\SlDemo\xSysApi_LanTai.h" />
+    <ClInclude Include="..\..\code\AfcCore\TxnRecord.h" />
+    <ClInclude Include="..\..\code\AfcCore\UiAccess.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\add.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\add_2.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\qPBOC.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\qpboc_8583.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\qpboc_head.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\SQD.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionPay\tms.h" />
+    <ClInclude Include="..\..\code\AfcCore\xSys_Lantaiyuan.h" />
+    <ClInclude Include="..\..\code\public\debugInfor.h" />
+    <ClInclude Include="..\..\code\public\debugOut.h" />
+    <ClInclude Include="..\..\code\public\Macro_Proj.h" />
+    <ClInclude Include="..\..\code\public\ManageThread.h" />
+    <ClInclude Include="..\..\code\public\TransmitData.h" />
+    <ClInclude Include="..\..\code\public\TypeDef.h" />
+    <ClInclude Include="..\..\code\xStorage\FileManage.h" />
+    <ClInclude Include="..\..\code\xStorage\RamStorage.h" />
+    <ClInclude Include="..\..\code\xStorage\xStorage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\AfcCore\citydifferent.c" />
+    <ClCompile Include="..\..\code\AfcCore\CPUCard.c" />
+    <ClCompile Include="..\..\code\AfcCore\CPUCARJTB.c" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\Base64.c" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\CRC.C" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\MD5.c" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\MYDES.c" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\rsalib.c" />
+    <ClCompile Include="..\..\code\AfcCore\Crypto\sha1.c" />
+    <ClCompile Include="..\..\code\AfcCore\debugInfor.c" />
+    <ClCompile Include="..\..\code\AfcCore\EC20Lx_HTTP.c" />
+    <ClCompile Include="..\..\code\AfcCore\EC20Lx_HTTPS.c" />
+    <ClCompile Include="..\..\code\AfcCore\GprsSocket.c" />
+    <ClCompile Include="..\..\code\AfcCore\gps.c" />
+    <ClCompile Include="..\..\code\AfcCore\GPS\gps_setttyS2.c" />
+    <ClCompile Include="..\..\code\AfcCore\ICCardLib.c" />
+    <ClCompile Include="..\..\code\AfcCore\inputmisc\GPIOCtrl.c" />
+    <ClCompile Include="..\..\code\AfcCore\inputmisc\IcCardCtrlApi.c" />
+    <ClCompile Include="..\..\code\AfcCore\inputmisc\PsamCard.c" />
+    <ClCompile Include="..\..\code\AfcCore\inputmisc\Uart.c" />
+    <ClCompile Include="..\..\code\AfcCore\main.c" />
+    <ClCompile Include="..\..\code\AfcCore\Other\LightBeep.cpp" />
+    <ClCompile Include="..\..\code\AfcCore\Other\Uart.cpp" />
+    <ClCompile Include="..\..\code\AfcCore\Other\WatchDog.cpp" />
+    <ClCompile Include="..\..\code\AfcCore\PSAMLib.c" />
+    <ClCompile Include="..\..\code\AfcCore\QRCodeMain.c" />
+    <ClCompile Include="..\..\code\AfcCore\RecordFile.c" />
+    <ClCompile Include="..\..\code\AfcCore\SL8583_4GLinux.c" />
+    <ClCompile Include="..\..\code\AfcCore\SlDemo\DemoMain.c" />
+    <ClCompile Include="..\..\code\AfcCore\SlDemo\GPRS.c" />
+    <ClCompile Include="..\..\code\AfcCore\SlDemo\LightColor.c" />
+    <ClCompile Include="..\..\code\AfcCore\SlDemo\xSysApi_LanTai.cpp" />
+    <ClCompile Include="..\..\code\AfcCore\UiAccess.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\add.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\add_2.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\qPBOCrsa.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\qpboc_8583.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\SQD.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionPay\tms.c" />
+    <ClCompile Include="..\..\code\AfcCore\xSys_Lantaiyuan.c" />
+    <ClCompile Include="..\..\code\debug\debugOut.c" />
+    <ClCompile Include="..\..\code\xStorage\FileManage.c" />
+    <ClCompile Include="..\..\code\xStorage\RamStorage.c" />
+    <ClCompile Include="..\..\code\xStorage\xStorage.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
