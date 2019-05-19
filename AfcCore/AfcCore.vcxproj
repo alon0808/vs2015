@@ -187,6 +187,7 @@
     <ClInclude Include="..\..\code\AfcCore\inputmisc\Uart.h" />
     <ClInclude Include="..\..\code\AfcCore\inputmisc\WatchDog.h" />
     <ClInclude Include="..\..\code\AfcCore\libsm.h" />
+    <ClInclude Include="..\..\code\AfcCore\libSM2\libsm.h" />
     <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\alisp.h" />
     <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\asoundef.h" />
     <ClInclude Include="..\..\code\AfcCore\ltyapp\alsa\include\alsa\asoundlib.h" />
@@ -282,6 +283,7 @@
     <ClInclude Include="..\..\code\AfcCore\SlDemo\xSysApi_LanTai.h" />
     <ClInclude Include="..\..\code\AfcCore\TxnRecord.h" />
     <ClInclude Include="..\..\code\AfcCore\UiAccess.h" />
+    <ClInclude Include="..\..\code\AfcCore\UnionBusCode\UnPayBus.h" />
     <ClInclude Include="..\..\code\AfcCore\UnionPay\add.h" />
     <ClInclude Include="..\..\code\AfcCore\UnionPay\add_2.h" />
     <ClInclude Include="..\..\code\AfcCore\UnionPay\qPBOC.h" />
@@ -334,6 +336,7 @@
     <ClCompile Include="..\..\code\AfcCore\SlDemo\LightColor.c" />
     <ClCompile Include="..\..\code\AfcCore\SlDemo\xSysApi_LanTai.cpp" />
     <ClCompile Include="..\..\code\AfcCore\UiAccess.c" />
+    <ClCompile Include="..\..\code\AfcCore\UnionBusCode\UnPayBus.c" />
     <ClCompile Include="..\..\code\AfcCore\UnionPay\add.c" />
     <ClCompile Include="..\..\code\AfcCore\UnionPay\add_2.c" />
     <ClCompile Include="..\..\code\AfcCore\UnionPay\qPBOCrsa.c" />
